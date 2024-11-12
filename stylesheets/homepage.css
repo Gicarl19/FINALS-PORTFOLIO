@@ -1,0 +1,69 @@
+
+body{
+    color: orange;
+    background: linear-gradient( rgba(0,0,0,0.95),rgba(0,0,0,0.65),rgba(0,0,0,0.38),rgba(0,0,0,0)), url('/images/bg.jpg');
+    background-size: cover;
+      }
+.container{
+    width: 900px;
+    border: 1px solid yellow; 
+    float: right;
+    height: 100px;
+    background-color: orange;
+    font-weight: bold;
+     
+}
+.container ul li{
+ width: 215px;
+ float: right;
+ margin: 10px auto;
+ text-align: center;
+ list-style: none;
+ 
+   }
+   .container ul li a{
+    text-decoration: none;
+    color: black;
+}
+.container ul li:hover{
+       background-color:black;
+   }
+.container ul li a:hover{
+       color: orange;
+   }
+   
+.welcome{
+      width: 250px;
+       height: 539px;
+       background-color: black;
+       opacity: 0.9;
+       padding: 55px;
+       text-align: center;
+       color: white;
+
+}
+   .pic{
+    height: 0;
+    width: 45px;
+   
+    
+   }
+   .imagess img{
+    border-radius: 100%;
+    top: 0px;
+    padding: 100px;
+    height: fit-content;
+    width: 500px ;
+    float: right;
+   padding-top: 50px;
+   padding-bottom: 30px;
+
+   }
+   .foot{
+    align-items: center;
+   }
+   span{
+    color: orange;
+   }
+   
+  
