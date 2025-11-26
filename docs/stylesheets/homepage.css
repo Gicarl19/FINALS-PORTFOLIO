@@ -1,68 +1,131 @@
-
-body{
+body {
     color: orange;
-    background: linear-gradient( rgba(0,0,0,0.95),rgba(0,0,0,0.65),rgba(0,0,0,0.38),rgba(0,0,0,0)), url('/images/bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.65), rgba(0,0,0,0.38), rgba(0,0,0,0)), 
+                url('/images/bg.jpg');
     background-size: cover;
-      }
-.container{
-    width: 1000px;
-    border: 1px solid yellow; 
-    float: right;
-    height: 100px;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV BAR */
+.container {
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 1px solid yellow;
     background-color: orange;
     font-weight: bold;
-     
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
 }
-.container ul li{
- width: 215px;
- float: right;
- margin: 10px auto;
- text-align: center;
- list-style: none;
- 
+
+.container ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
-.container ul li a{
+
+.container ul li {
+    list-style: none;
+}
+
+.container ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
-.container ul li a:hover{
-       color: white;
-   }
-   
-.welcome{
-      width: 250px;
-       height: 539px;
-       background-color: black;
-       opacity: 0.9;
-       padding: 55px;
-       text-align: center;
-       color: white;
 
+.container ul li a:hover {
+    color: white;
 }
-   .pic{
-    height: 0;
-    width: 45px;
-   
-    
-   }
-   .imagess img{
+
+/* SIDEBAR / WELCOME AREA */
+.welcome {
+    width: 260px;
+    background-color: rgba(0,0,0,0.9);
+    padding: 55px;
+    text-align: center;
+    color: white;
+}
+
+/* IMAGE RIGHT SIDE */
+.imagess img {
     border-radius: 100%;
-    top: 0px;
-    padding: 100px;
-    height: fit-content;
-    width: 500px ;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     float: right;
-   padding-top: 50px;
-   padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
 
-   }
-   .foot{
-    align-items: center;
-   }
-   span{
+span {
     color: orange;
-   }
-   
-  
+}
+
+/* ------- RESPONSIVE DESIGN ------- */
+
+/* Tablet and Medium Screens */
+@media screen and (max-width: 992px) {
+    .container ul li a {
+        font-size: 18px;
+    }
+
+    .welcome {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .imagess img {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+
+    /* Convert nav into vertical stack */
+    .container {
+        justify-content: center;
+    }
+
+    .container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container ul li a {
+        font-size: 18px;
+    }
+
+    .welcome {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .imagess img {
+        max-width: 300px;
+        margin: auto;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+
+    .container ul li a {
+        font-size: 16px;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+
+    .imagess img {
+        max-width: 250px;
+    }
+}
