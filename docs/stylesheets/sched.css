@@ -14,7 +14,9 @@ table,th,td{
 }
 body{
     background-color: black;
-}nav{
+}
+
+nav{
     display:flex ;
     width: 84%;
     margin: auto;
@@ -29,11 +31,11 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: orange;
     font-weight: bold;
+    font-size: 26px;
 
 }
 nav ul li a:hover{
-    color: orange;
-    background: black
+    color: white;
 }

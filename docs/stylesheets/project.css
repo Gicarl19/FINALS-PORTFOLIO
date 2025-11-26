@@ -1,76 +1,167 @@
-*{
-    padding: 0;
+* {
     margin: 0;
-    font-family: sans-serif;  
+    padding: 0;
+    font-family: sans-serif;
 }
-body{
-    background-color: black;
-}
-.box{
-    background-color: orange;
-    
-}
-.box h1{
-    font-size: 32px;
 
+body {
+    background-color: black;
+    color: white;
 }
-nav{
-    display:flex ;
-    width: 84%;
-    margin: auto;
+
+/* -------------------------
+   HEADER / NAV BAR
+-------------------------- */
+.box {
+    background-color: orange;
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 10px;
     padding: 20px 0;
+}
+
+.box h1 {
+    font-size: 28px;
+    margin-left: 30px;
+    color: black;
+}
+
+nav {
+    display: flex;
+    width: 90%;
+    margin: auto;
     align-items: center;
     justify-content: space-between;
-    
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
 
+nav ul {
+    display: flex;
+    gap: 25px;
 }
-nav ul li a:hover{
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
-.proj ul li{
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* -------------------------
+   PROJECT LINKS + IMAGE
+-------------------------- */
+.container {
+    width: 90%;
     margin: auto;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: first baseline;
-    padding: 30px;
-    list-style: none;
-    
+    justify-content: space-between;
+    gap: 40px;
 }
-.proj ul li a{
+
+.proj{
+    flex: 1;
+}
+
+.proj ul {
+    list-style: none;
+}
+
+.proj ul li {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.proj ul li a {
     text-decoration: none;
     font-weight: bold;
     color: white;
     font-size: 22px;
     
 }
-.proj ul li a:hover{
-    text-decoration: none;
-    font-weight: bold;
+
+.proj ul li a:hover {
     color: orange;
-    
-}
-h1{
-    color: black;
-}
-.container{
-align-items: center;
-padding-top: 100px;
-
 }
 
-.img{
-    float: right;
-    height:380px;
-   position: relative;
-   
-  }
+/* IMAGE */
+.img {
+    max-width: 310px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* -------------------------
+   RESPONSIVE BREAKPOINTS
+-------------------------- */
+
+/* TABLET */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+        padding-top: 40px;
+    }
+
+    .img {
+        max-width: 300px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .proj ul li a {
+        font-size: 20px;
+    }
+
+    .img {
+        max-width: 250px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .box h1 {
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+
+    .proj ul li a {
+        font-size: 18px;
+    }
+}
